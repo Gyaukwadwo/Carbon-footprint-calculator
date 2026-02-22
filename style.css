@@ -1,15 +1,22 @@
 body {
   font-family: Arial, sans-serif;
   background: linear-gradient(to right, #e0f7fa, #f4f7f9);
-  padding: 30px;
-  max-width: 700px;
+  padding: 20px;
+  max-width: 800px;
   margin: auto;
   text-align: center;
 }
 
-h2 { color: #2c3e50; margin-bottom: 20px; }
+h2 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
 
-label { font-weight: bold; display: block; margin-top: 10px; }
+label {
+  font-weight: bold;
+  display: block;
+  margin-top: 10px;
+}
 
 input {
   width: 80%;
@@ -35,19 +42,27 @@ button {
   cursor: pointer;
   font-size: 14px;
   border-radius: 5px;
-  transition: transform 0.3s, background-color 0.3s;
+  transition:
+    transform 0.3s,
+    background-color 0.3s;
 }
 
-button:hover { background-color: #27ae60; transform: scale(1.05); }
+button:hover {
+  background-color: #27ae60;
+  transform: scale(1.05);
+}
 
-#result, #score {
+#result,
+#score {
   margin-top: 20px;
   font-size: 18px;
   font-weight: bold;
   transition: color 0.5s;
 }
 
-canvas { margin-top: 20px; }
+canvas {
+  margin-top: 20px;
+}
 
 img {
   display: block;
@@ -56,12 +71,20 @@ img {
 }
 
 @keyframes float {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0); }
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
-#meterContainer { margin-top: 20px; }
+#meterContainer {
+  margin-top: 20px;
+}
 
 #meterFill {
   width: 100px;
