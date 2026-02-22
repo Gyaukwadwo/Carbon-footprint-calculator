@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Carbon Footprint Calculator</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <img id="meterGif"
+    src="https://media3.giphy.com/media/v1.Y2lkPTZjMDliOTUyMzFxOXprZ2JlczhiMTJxZTlwaXExanRtbHZ6a2FoOTF0ZXdtcG96ZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/jZmiGV3hso3kwzXVnL/giphy.webp"
+     width="200">
+
+  <h2>Small Business Carbon Footprint Calculator</h2>
+
+  <!-- Preset Buttons -->
+  <button onclick="applyPreset('shop')">Shop</button>
+  <button onclick="applyPreset('restaurant')">Restaurant</button>
+  <button onclick="applyPreset('office')">Office</button>
+
+  <br><br>
+
+  <!-- Input Fields -->
+  <label>Monthly Electricity (kWh):</label>
+  <input type="number" id="electricity" title="Monthly electricity in kWh"><br><br>
+
+  <label>Fuel Used (liters/month):</label>
+  <input type="number" id="fuel" title="Fuel in liters/month"><br><br>
+
+  <label>Waste Generated (kg/month):</label>
+  <input type="number" id="waste" title="Waste in kg/month"><br><br>
+
+  <!-- Calculate Button -->
+  <button onclick="calculate()">Calculate Footprint</button>
+
+  <!-- Carbon Meter -->
+  <div id="meterContainer">
+    <div id="meterFill"></div>
+    <div id="meterValue">0</div>
+    <div id="feedbackText">Your impact will appear here</div>
+  </div>
+
+<!-- Carbon Meter GIF -->
+<img src="https://media3.giphy.com/media/v1.Y2lkPTZjMDliOTUyMzFxOXprZ2JlczhiMTJxZTlwaXExanRtbHZ6a2FoOTF0ZXdtcG96ZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/jZmiGV3hso3kwzXVnL/giphy.webp" alt="Carbon meter" width="150">
+
+  <!-- Result & Carbon Score -->
+  <h3 id="result"></h3>
+  <h3 id="score"></h3>
+<img src="https://media1.giphy.com/media/v1.Y2lkPTZjMDliOTUyYzBlczB0eHA2NnJwNWhvYmptZTk1c2M4anpieXo0aDBtOGlqN3JzZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/0mUNyovoh0qZavUqVl/giphy.webp" alt="Earth rotating slowly with animated hearts and the text love your planet visible; global view from space with a soft glowing atmosphere; tone affectionate and uplifting" width="150" role="""img">
+
+<!-- Pie Chart -->
+<canvas id="carbonChart" width="400" role="img" aria-label="Pie chart displaying carbon emission categories"></canvas>
+
+<script src="emissionFactors.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
